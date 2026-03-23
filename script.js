@@ -19,6 +19,19 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
+// Clickable project cards
+document.querySelectorAll('.project-clickable').forEach(card => {
+    card.addEventListener('click', (e) => {
+        const link = card.getAttribute('data-link');
+        const expand = card.getAttribute('data-expand');
+        if (link) {
+            window.open(link, '_blank', 'noopener');
+        } else if (expand) {
+            card.classList.toggle('expanded');
+        }
+    });
+});
+
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

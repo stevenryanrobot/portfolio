@@ -519,6 +519,41 @@ body {
     font-family: var(--font-mono);
 }
 
+/* ===== Clickable Projects ===== */
+.project-clickable {
+    cursor: pointer;
+}
+
+.project-clickable:hover {
+    border-color: var(--color-accent);
+}
+
+.project-link-icon {
+    font-size: 0.85em;
+    color: var(--color-accent);
+    margin-left: 4px;
+    transition: transform var(--transition);
+    display: inline-block;
+}
+
+.project-clickable[data-expand="true"] .project-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-top: 0;
+}
+
+.project-clickable[data-expand="true"].expanded .project-details {
+    max-height: 600px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.project-clickable[data-expand="true"].expanded .project-link-icon {
+    transform: rotate(180deg);
+}
+
 /* ===== Awards ===== */
 .awards-grid {
     display: grid;

@@ -18,9 +18,9 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#awards">Awards</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -86,13 +86,54 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="edu-card">
+                    <div class="edu-period">2025 — 2026</div>
+                    <h3>Duke University</h3>
+                    <p class="edu-degree">Master of Engineering — Mechanical Engineering</p>
+                    <p class="edu-courses">Relevant Coursework: Data-Driven Dynamics, Reinforcement Learning, Computer Vision</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-period">2019 — 2023</div>
+                    <h3>Northeastern University</h3>
+                    <p class="edu-degree">Bachelor of Engineering — Robotics</p>
+                    <p class="edu-courses">Relevant Coursework: Robot Operating System, Mechatronics, Robot Perception and Human-Computer Interaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
-            <!-- Project 1: Palletizing Robot -->
-            <article class="project-card project-featured">
+            <!-- Project 1: Humanoid Robot (moved to first) -->
+            <article class="project-card project-clickable" data-link="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1">
+                <div class="project-info full-width-info">
+                    <span class="project-tag">Course Project</span>
+                    <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot <span class="project-link-icon">&#8599;</span></h3>
+                    <p class="project-org">Duke University</p>
+                    <p>Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
+                    <div class="project-details">
+                        <ul class="project-highlights">
+                            <li>Trained walking policies using reinforcement learning in simulation</li>
+                            <li>Evaluated robustness against external wind perturbations</li>
+                            <li>Analyzed error bounds and convergence properties of RL algorithms</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Palletizing Robot -->
+            <article class="project-card project-clickable project-featured" data-expand="true">
                 <div class="project-images">
                     <div class="image-gallery">
                         <img src="assets/images/palletize-2.png" alt="Intelligent palletizing robot simulation" class="gallery-main">
@@ -104,40 +145,44 @@
                 </div>
                 <div class="project-info">
                     <span class="project-tag">Industry Project</span>
-                    <h3>Intelligent Palletizing & Depalletizing Robot</h3>
+                    <h3>Intelligent Palletizing & Depalletizing Robot <span class="project-link-icon">&#9662;</span></h3>
                     <p class="project-org">Shenzhen Tsinghua University Research Institute</p>
                     <p>Led the full-stack software development of an autonomous palletizing/depalletizing robot system for logistics automation. The system replaces manual labor in loading and unloading cargo from trucks.</p>
-                    <ul class="project-highlights">
-                        <li>Designed the complete software architecture including communication layer, task control, vision pipeline, and motion planning</li>
-                        <li>Implemented a finite state machine for robust task execution with dynamic step registration</li>
-                        <li>Integrated vision-based box detection with suction-based grasping (top & side suction)</li>
-                        <li>Deployed on real hardware with RS485 serial communication and TCP-based remote control</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>C++</span><span>Motion Planning</span><span>Computer Vision</span><span>TCP/Serial</span><span>FSM</span>
+                    <div class="project-details">
+                        <ul class="project-highlights">
+                            <li>Designed the complete software architecture including communication layer, task control, vision pipeline, and motion planning</li>
+                            <li>Implemented a finite state machine for robust task execution with dynamic step registration</li>
+                            <li>Integrated vision-based box detection with suction-based grasping (top & side suction)</li>
+                            <li>Deployed on real hardware with RS485 serial communication and TCP-based remote control</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>C++</span><span>Motion Planning</span><span>Computer Vision</span><span>TCP/Serial</span><span>FSM</span>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <!-- System Architecture -->
-            <article class="project-card project-arch">
+            <article class="project-card project-clickable project-arch" data-expand="true">
                 <div class="project-info">
                     <span class="project-tag">System Design</span>
-                    <h3>Palletizing Robot — Software Architecture</h3>
+                    <h3>Palletizing Robot — Software Architecture <span class="project-link-icon">&#9662;</span></h3>
                     <p>Designed a modular, layered architecture for the palletizing robot control system. The architecture separates business logic, communication, and hardware driver layers for maintainability and extensibility.</p>
-                    <ul class="project-highlights">
-                        <li>Core Logic Layer: Lifecycle management, task loading, and finite state machine</li>
-                        <li>Communication Layer: TCP server with JSON command parsing and routing</li>
-                        <li>Driver Layer: Vision control, motion planning interface, and serial communication</li>
-                    </ul>
+                    <div class="project-details">
+                        <ul class="project-highlights">
+                            <li>Core Logic Layer: Lifecycle management, task loading, and finite state machine</li>
+                            <li>Communication Layer: TCP server with JSON command parsing and routing</li>
+                            <li>Driver Layer: Vision control, motion planning interface, and serial communication</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="project-images">
                     <img src="assets/images/palletize-diagram.png" alt="System architecture diagram" class="architecture-img">
                 </div>
             </article>
 
-            <!-- Project 2: Surgery Robot -->
-            <article class="project-card">
+            <!-- Project 3: Surgery Robot -->
+            <article class="project-card project-clickable" data-expand="true">
                 <div class="project-images">
                     <div class="image-gallery">
                         <img src="assets/images/surgery-arm-move.png" alt="Visual servoing control flow with AprilTag" class="gallery-main">
@@ -149,55 +194,41 @@
                 </div>
                 <div class="project-info">
                     <span class="project-tag">Research</span>
-                    <h3>Surgical Robot — Visual Servoing & Tool Detection</h3>
+                    <h3>Surgical Robot — Visual Servoing & Tool Detection <span class="project-link-icon">&#9662;</span></h3>
                     <p class="project-org">University Research Lab</p>
-                    <p>Developed a visual servoing system for surgical robotic arm control using AprilTag-based pose estimation, combined with deep learning–based surgical tool detection using ConvLSTM networks.</p>
-                    <ul class="project-highlights">
-                        <li>Implemented Position-Based Visual Servoing (PBVS) with AprilTag recognition and Kalman filtering</li>
-                        <li>Built a ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
-                        <li>Integrated encoder feedback for closed-loop joint control</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Visual Servoing</span><span>ConvLSTM</span>
+                    <p>Developed a visual servoing system for surgical robotic arm control using AprilTag-based pose estimation, combined with deep learning-based surgical tool detection using ConvLSTM networks.</p>
+                    <div class="project-details">
+                        <ul class="project-highlights">
+                            <li>Implemented Position-Based Visual Servoing (PBVS) with AprilTag recognition and Kalman filtering</li>
+                            <li>Built a ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
+                            <li>Integrated encoder feedback for closed-loop joint control</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Visual Servoing</span><span>ConvLSTM</span>
+                        </div>
                     </div>
                 </div>
             </article>
 
-            <!-- Project 3: Soccer Robot -->
-            <article class="project-card">
+            <!-- Project 4: Soccer Robot -->
+            <article class="project-card project-clickable" data-expand="true">
                 <div class="project-images">
                     <img src="assets/images/soccer-robot.png" alt="FIRA 5v5 robot soccer simulation" class="single-img">
                 </div>
                 <div class="project-info">
                     <span class="project-tag">Competition</span>
-                    <h3>FIRA Robot Soccer — 5v5 Simulation</h3>
+                    <h3>FIRA Robot Soccer — 5v5 Simulation <span class="project-link-icon">&#9662;</span></h3>
                     <p class="project-org">2021 China Robotics Competition</p>
                     <p>Developed multi-agent coordination strategies for a 5v5 robot soccer simulation. The team designed formation control, ball tracking, and cooperative decision-making algorithms.</p>
-                    <ul class="project-highlights">
-                        <li>Designed role assignment and formation strategies for 5 autonomous agents</li>
-                        <li>Implemented real-time ball tracking and predictive interception</li>
-                        <li>Won Second Prize in FIRA Small Group Simulation category</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 4: Humanoid Robot -->
-            <article class="project-card">
-                <div class="project-info full-width-info">
-                    <span class="project-tag">Course Project</span>
-                    <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot</h3>
-                    <p class="project-org">Duke University</p>
-                    <p>Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
-                    <ul class="project-highlights">
-                        <li>Trained walking policies using reinforcement learning in simulation</li>
-                        <li>Evaluated robustness against external wind perturbations</li>
-                        <li>Analyzed error bounds and convergence properties of RL algorithms</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
+                    <div class="project-details">
+                        <ul class="project-highlights">
+                            <li>Designed role assignment and formation strategies for 5 autonomous agents</li>
+                            <li>Implemented real-time ball tracking and predictive interception</li>
+                            <li>Won Second Prize in FIRA Small Group Simulation category</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -205,7 +236,7 @@
     </section>
 
     <!-- Awards Section -->
-    <section class="section" id="awards">
+    <section class="section section-alt" id="awards">
         <div class="container">
             <h2 class="section-title">Awards & Achievements</h2>
             <div class="awards-grid">
@@ -223,27 +254,6 @@
                     <div class="award-year">2021</div>
                     <h3>China Robotics Competition — Second Prize</h3>
                     <p>FIRA Small Group Simulation 5v5 category. Designed multi-agent coordination strategies for autonomous robot soccer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section section-alt" id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="edu-card">
-                    <div class="edu-period">2025 — 2026</div>
-                    <h3>Duke University</h3>
-                    <p class="edu-degree">Master of Engineering — Robotics</p>
-                    <p class="edu-courses">Key Courses: Reinforcement Learning, Data-Driven Dynamics, Introduction to Robotics, Ethics in Robotics & Automation</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-period">Experience</div>
-                    <h3>Shenzhen Tsinghua University Research Institute</h3>
-                    <p class="edu-degree">Research Engineer — Intelligent Robotics Lab</p>
-                    <p class="edu-courses">Led software development for industrial palletizing robot systems. Full-cycle development from architecture design to real-world deployment.</p>
                 </div>
             </div>
         </div>
