@@ -19,11 +19,39 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Clickable project cards
-document.querySelectorAll('.project-clickable').forEach(card => {
+// Project detail panel
+const panel = document.getElementById('projectPanel');
+const overlay = document.getElementById('panelOverlay');
+const panelContent = document.getElementById('panelContent');
+const panelClose = document.getElementById('panelClose');
+
+function openPanel(projectId) {
+    const tmpl = document.getElementById('tmpl-' + projectId);
+    if (!tmpl) return;
+    panelContent.innerHTML = tmpl.innerHTML;
+    panel.classList.add('open');
+    overlay.classList.add('active');
+    document.body.classList.add('panel-open');
+    panel.scrollTop = 0;
+}
+
+function closePanel() {
+    panel.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.classList.remove('panel-open');
+}
+
+document.querySelectorAll('.project-card[data-project]').forEach(card => {
     card.addEventListener('click', () => {
-        card.classList.toggle('expanded');
+        openPanel(card.getAttribute('data-project'));
     });
+});
+
+panelClose.addEventListener('click', closePanel);
+overlay.addEventListener('click', closePanel);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePanel();
 });
 
 // Clickable award cards
