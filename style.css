@@ -433,18 +433,13 @@ body {
     background: var(--color-accent);
 }
 
-/* ===== Projects Grid ===== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
+/* ===== Projects (single column cards) ===== */
 .project-card {
     background: var(--color-surface);
     border-radius: var(--radius);
     border: 1px solid var(--color-border);
-    overflow: hidden;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
     transition: all var(--transition);
     cursor: pointer;
 }
@@ -452,13 +447,14 @@ body {
 .project-card:hover {
     box-shadow: var(--shadow-md);
     border-color: var(--color-accent);
-    transform: translateY(-2px);
 }
 
-.project-info {
-    padding: 1.75rem;
+.project-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
 }
 
 .project-tag {
@@ -469,38 +465,71 @@ body {
     font-weight: 600;
     padding: 4px 12px;
     border-radius: 20px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     width: fit-content;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.project-info h3 {
-    font-size: 1.15rem;
+.project-card h3 {
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
     letter-spacing: -0.3px;
 }
 
 .project-org {
     color: var(--color-accent);
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    margin-bottom: 0.5rem;
 }
 
-.project-info > p:not(.project-org) {
+.project-period {
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-top: 1.8rem;
+}
+
+.project-card > p {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.project-highlights {
+    list-style: none;
+    margin-bottom: 1.25rem;
+}
+
+.project-highlights li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
     line-height: 1.6;
+}
+
+.project-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: auto;
 }
 
 .project-tech span {
@@ -513,7 +542,32 @@ body {
     font-family: var(--font-mono);
 }
 
-/* ===== Project Detail Panel ===== */
+.project-open-hint,
+.exp-open-hint {
+    color: var(--color-accent);
+    font-size: 0.85em;
+    margin-left: 6px;
+    opacity: 0;
+    transition: opacity var(--transition), transform var(--transition);
+    display: inline-block;
+}
+
+.project-card:hover .project-open-hint,
+.exp-clickable:hover .exp-open-hint {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+/* ===== Clickable Experience ===== */
+.exp-clickable {
+    cursor: pointer;
+}
+
+.exp-clickable:hover {
+    border-color: var(--color-accent);
+}
+
+/* ===== Slide-in Detail Panel (LEFT side) ===== */
 .panel-overlay {
     position: fixed;
     inset: 0;
@@ -531,22 +585,22 @@ body {
     pointer-events: auto;
 }
 
-.project-panel {
+.detail-panel {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
-    width: min(560px, 85vw);
+    width: min(640px, 88vw);
     z-index: 2000;
     background: var(--color-surface);
-    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.12);
-    transform: translateX(100%);
+    box-shadow: 8px 0 40px rgba(0, 0, 0, 0.12);
+    transform: translateX(-100%);
     transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
     overflow-y: auto;
     overscroll-behavior: contain;
 }
 
-.project-panel.open {
+.detail-panel.open {
     transform: translateX(0);
 }
 
@@ -977,16 +1031,20 @@ body.panel-open {
         grid-template-columns: 1fr;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .awards-grid {
         grid-template-columns: 1fr;
     }
 
     .education-timeline {
         grid-template-columns: 1fr;
+    }
+
+    .project-header {
+        flex-direction: column;
+    }
+
+    .project-period {
+        margin-top: 0;
     }
 
     .exp-header {

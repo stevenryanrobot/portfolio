@@ -19,14 +19,14 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Project detail panel
-const panel = document.getElementById('projectPanel');
+// Shared slide-in panel logic
+const panel = document.getElementById('detailPanel');
 const overlay = document.getElementById('panelOverlay');
 const panelContent = document.getElementById('panelContent');
 const panelClose = document.getElementById('panelClose');
 
-function openPanel(projectId) {
-    const tmpl = document.getElementById('tmpl-' + projectId);
+function openPanel(templateId) {
+    const tmpl = document.getElementById('tmpl-' + templateId);
     if (!tmpl) return;
     panelContent.innerHTML = tmpl.innerHTML;
     panel.classList.add('open');
@@ -41,9 +41,17 @@ function closePanel() {
     document.body.classList.remove('panel-open');
 }
 
-document.querySelectorAll('.project-card[data-project]').forEach(card => {
+// Project cards open panel
+document.querySelectorAll('.project-card[data-panel]').forEach(card => {
     card.addEventListener('click', () => {
-        openPanel(card.getAttribute('data-project'));
+        openPanel(card.getAttribute('data-panel'));
+    });
+});
+
+// Experience cards open panel
+document.querySelectorAll('.exp-clickable[data-panel]').forEach(card => {
+    card.addEventListener('click', () => {
+        openPanel(card.getAttribute('data-panel'));
     });
 });
 
@@ -52,6 +60,13 @@ overlay.addEventListener('click', closePanel);
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closePanel();
+});
+
+// Prevent GitHub link inside panel from closing panel
+document.getElementById('panelContent').addEventListener('click', (e) => {
+    if (e.target.closest('.project-github-link')) {
+        e.stopPropagation();
+    }
 });
 
 // Clickable award cards

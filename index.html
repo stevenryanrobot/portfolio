@@ -110,10 +110,10 @@
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="experience-timeline">
-                <div class="exp-card">
+                <div class="exp-card exp-clickable" data-panel="tsinghua">
                     <div class="exp-header">
                         <div>
-                            <h3>Tsinghua University Research Institute in Shenzhen</h3>
+                            <h3>Tsinghua University Research Institute in Shenzhen <span class="exp-open-hint">&#8594;</span></h3>
                             <p class="exp-role">Robot Software Engineer</p>
                         </div>
                         <div class="exp-meta">
@@ -152,89 +152,82 @@
     <section class="section section-alt" id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
 
-                <article class="project-card" data-project="unitree">
-                    <div class="project-info">
+            <article class="project-card" data-panel="unitree">
+                <div class="project-header">
+                    <div>
                         <span class="project-tag">Course Project</span>
-                        <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot</h3>
+                        <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot <span class="project-open-hint">&#8594;</span></h3>
                         <p class="project-org">Duke University</p>
-                        <p>Reinforcement learning for stable bipedal walking under wind disturbances.</p>
-                        <div class="project-tech">
-                            <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
-                        </div>
                     </div>
-                </article>
+                    <span class="project-period">Jan 2026 — Apr 2026</span>
+                </div>
+                <p>Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
+                <ul class="project-highlights">
+                    <li>Trained walking policies using reinforcement learning in simulation</li>
+                    <li>Evaluated robustness against external wind perturbations</li>
+                    <li>Analyzed error bounds and convergence properties of RL algorithms</li>
+                </ul>
+                <div class="project-tech">
+                    <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
+                </div>
+            </article>
 
-                <article class="project-card" data-project="palletize">
-                    <div class="project-info">
-                        <span class="project-tag">Industry Project</span>
-                        <h3>Intelligent Palletizing & Depalletizing Robot</h3>
-                        <p class="project-org">Tsinghua University Research Institute in Shenzhen</p>
-                        <p>Full-stack software for autonomous logistics robot system.</p>
-                        <div class="project-tech">
-                            <span>C++</span><span>Motion Planning</span><span>Computer Vision</span><span>FSM</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card" data-project="surgery">
-                    <div class="project-info">
+            <article class="project-card" data-panel="surgery">
+                <div class="project-header">
+                    <div>
                         <span class="project-tag">Research</span>
-                        <h3>Surgical Robot — Visual Servoing & Tool Detection</h3>
-                        <p class="project-org">University Research Lab</p>
-                        <p>Visual servoing with AprilTag pose estimation and ConvLSTM tool detection.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>ConvLSTM</span>
-                        </div>
+                        <h3>Surgical Robot — Visual Servoing & Tool Detection <span class="project-open-hint">&#8594;</span></h3>
+                        <p class="project-org">Northeastern University Research Lab</p>
                     </div>
-                </article>
+                    <span class="project-period">Sep 2022 — Jun 2023</span>
+                </div>
+                <p>Developed a visual servoing system for surgical robotic arm control using AprilTag-based pose estimation, combined with deep learning-based surgical tool detection using ConvLSTM networks.</p>
+                <ul class="project-highlights">
+                    <li>Implemented Position-Based Visual Servoing (PBVS) with AprilTag recognition and Kalman filtering</li>
+                    <li>Built a ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
+                    <li>Integrated encoder feedback for closed-loop joint control</li>
+                </ul>
+                <div class="project-tech">
+                    <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Visual Servoing</span><span>ConvLSTM</span>
+                </div>
+            </article>
 
-                <article class="project-card" data-project="soccer">
-                    <div class="project-info">
+            <article class="project-card" data-panel="soccer">
+                <div class="project-header">
+                    <div>
                         <span class="project-tag">Competition</span>
-                        <h3>FIRA Robot Soccer — 5v5 Simulation</h3>
+                        <h3>FIRA Robot Soccer — 5v5 Simulation <span class="project-open-hint">&#8594;</span></h3>
                         <p class="project-org">2021 China Robotics Competition</p>
-                        <p>Multi-agent coordination strategies for autonomous robot soccer.</p>
-                        <div class="project-tech">
-                            <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
-                        </div>
                     </div>
-                </article>
+                    <span class="project-period">Mar 2021 — Jul 2021</span>
+                </div>
+                <p>Developed multi-agent coordination strategies for a 5v5 robot soccer simulation. The team designed formation control, ball tracking, and cooperative decision-making algorithms.</p>
+                <ul class="project-highlights">
+                    <li>Designed role assignment and formation strategies for 5 autonomous agents</li>
+                    <li>Implemented real-time ball tracking and predictive interception</li>
+                    <li>Won Second Prize in FIRA Small Group Simulation category</li>
+                </ul>
+                <div class="project-tech">
+                    <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
+                </div>
+            </article>
 
-            </div>
         </div>
     </section>
 
-    <!-- Project Detail Panel -->
+    <!-- Slide-in Panel (shared for projects + experience) -->
     <div class="panel-overlay" id="panelOverlay"></div>
-    <aside class="project-panel" id="projectPanel">
+    <aside class="detail-panel" id="detailPanel">
         <button class="panel-close" id="panelClose">&times;</button>
         <div class="panel-content" id="panelContent"></div>
     </aside>
 
-    <!-- Hidden project detail data -->
-    <template id="tmpl-unitree">
-        <span class="project-tag">Course Project</span>
-        <h2>Wind-Robust Walking for Unitree G1 Humanoid Robot</h2>
-        <p class="panel-org">Duke University</p>
-        <p class="panel-desc">Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
-        <h3>Highlights</h3>
-        <ul class="panel-highlights">
-            <li>Trained walking policies using reinforcement learning in simulation</li>
-            <li>Evaluated robustness against external wind perturbations</li>
-            <li>Analyzed error bounds and convergence properties of RL algorithms</li>
-        </ul>
-        <div class="project-tech">
-            <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
-        </div>
-        <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener">&#128279; View on GitHub</a>
-    </template>
-
-    <template id="tmpl-palletize">
+    <!-- Templates -->
+    <template id="tmpl-tsinghua">
         <span class="project-tag">Industry Project</span>
         <h2>Intelligent Palletizing & Depalletizing Robot</h2>
-        <p class="panel-org">Tsinghua University Research Institute in Shenzhen</p>
+        <p class="panel-org">Tsinghua University Research Institute in Shenzhen &middot; Oct 2024 — Aug 2025</p>
         <div class="panel-images">
             <img src="assets/images/palletize-2.png" alt="Intelligent palletizing robot simulation">
             <div class="panel-images-row">
@@ -243,7 +236,13 @@
             </div>
         </div>
         <p class="panel-desc">Led the full-stack software development of an autonomous palletizing/depalletizing robot system for logistics automation. The system replaces manual labor in loading and unloading cargo from trucks.</p>
-        <h3>Highlights</h3>
+        <h3>Work Highlights</h3>
+        <ul class="panel-highlights">
+            <li>Architected the main control software for a logistics robot using C++, synchronizing 3D vision and hardware modules for automated operations in complex environments</li>
+            <li>Engineered a custom motion planning algorithm integrating Oriented Bounding Box (OBB) constraints to resolve kinematic challenges within confined truck spaces</li>
+            <li>Optimized trajectory generation time to &lt;80 ms, outperforming standard OMPL solvers in narrow-passage scenarios while ensuring zero-collision safety</li>
+        </ul>
+        <h3>Project Details</h3>
         <ul class="panel-highlights">
             <li>Designed the complete software architecture including communication layer, task control, vision pipeline, and motion planning</li>
             <li>Implemented a finite state machine for robust task execution with dynamic step registration</li>
@@ -262,10 +261,27 @@
         </div>
     </template>
 
+    <template id="tmpl-unitree">
+        <span class="project-tag">Course Project</span>
+        <h2>Wind-Robust Walking for Unitree G1 Humanoid Robot</h2>
+        <p class="panel-org">Duke University &middot; Jan 2026 — Apr 2026</p>
+        <p class="panel-desc">Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
+        <h3>Highlights</h3>
+        <ul class="panel-highlights">
+            <li>Trained walking policies using reinforcement learning in simulation</li>
+            <li>Evaluated robustness against external wind perturbations</li>
+            <li>Analyzed error bounds and convergence properties of RL algorithms</li>
+        </ul>
+        <div class="project-tech">
+            <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
+        </div>
+        <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener">&#128279; View on GitHub</a>
+    </template>
+
     <template id="tmpl-surgery">
         <span class="project-tag">Research</span>
         <h2>Surgical Robot — Visual Servoing & Tool Detection</h2>
-        <p class="panel-org">University Research Lab</p>
+        <p class="panel-org">Northeastern University Research Lab &middot; Sep 2022 — Jun 2023</p>
         <div class="panel-images">
             <img src="assets/images/surgery-arm-move.png" alt="Visual servoing control flow with AprilTag">
             <div class="panel-images-row">
@@ -288,7 +304,7 @@
     <template id="tmpl-soccer">
         <span class="project-tag">Competition</span>
         <h2>FIRA Robot Soccer — 5v5 Simulation</h2>
-        <p class="panel-org">2021 China Robotics Competition</p>
+        <p class="panel-org">2021 China Robotics Competition &middot; Mar 2021 — Jul 2021</p>
         <div class="panel-images">
             <img src="assets/images/soccer-robot.png" alt="FIRA 5v5 robot soccer simulation">
         </div>
