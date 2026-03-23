@@ -21,14 +21,15 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // Clickable project cards
 document.querySelectorAll('.project-clickable').forEach(card => {
-    card.addEventListener('click', (e) => {
-        const link = card.getAttribute('data-link');
-        const expand = card.getAttribute('data-expand');
-        if (link) {
-            window.open(link, '_blank', 'noopener');
-        } else if (expand) {
-            card.classList.toggle('expanded');
-        }
+    card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+    });
+});
+
+// Clickable award cards
+document.querySelectorAll('.award-clickable').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
     });
 });
 
@@ -42,7 +43,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 // Apply fade-in to sections and cards
-document.querySelectorAll('.project-card, .award-card, .skill-card, .edu-card, .about-text, .contact-content').forEach(el => {
+document.querySelectorAll('.project-card, .award-card, .skill-card, .edu-card, .exp-card, .about-text, .contact-content').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });

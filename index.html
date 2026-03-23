@@ -19,6 +19,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -107,16 +108,59 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Tsinghua University Research Institute in Shenzhen</h3>
+                            <p class="exp-role">Robot Software Engineer</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">Oct 2024 — Aug 2025</span>
+                            <span class="exp-location">Shenzhen, Guangdong, China</span>
+                        </div>
+                    </div>
+                    <ul class="exp-highlights">
+                        <li>Architected the main control software for a logistics robot using C++, synchronizing 3D vision and hardware modules for automated operations in complex environments</li>
+                        <li>Engineered a custom motion planning algorithm integrating Oriented Bounding Box (OBB) constraints to resolve kinematic challenges within confined truck spaces</li>
+                        <li>Optimized trajectory generation time to &lt;80 ms, outperforming standard OMPL solvers in narrow-passage scenarios while ensuring zero-collision safety</li>
+                    </ul>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>BYD Co., Ltd</h3>
+                            <p class="exp-role">R&D Quality Control Engineer</p>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-period">Jul 2023 — Sep 2024</span>
+                            <span class="exp-location">Shenzhen, Guangdong, China</span>
+                        </div>
+                    </div>
+                    <ul class="exp-highlights">
+                        <li>Led the R&D quality management for the "Seagull" EV export project, ensuring compliance with European regulatory standards and internal quality requirements</li>
+                        <li>Defined and executed 7 key Quality Gate criteria, serving as the primary lead for project status reporting and risk assessment in 4 major milestone reviews</li>
+                        <li>Conducted rigorous root cause analysis and issue tracking during Design Validation (DV) and Process Validation (PV) phases, significantly reducing defects during trial production</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section class="section" id="projects">
+    <section class="section section-alt" id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
             <!-- Project 1: Humanoid Robot (moved to first) -->
-            <article class="project-card project-clickable" data-link="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1">
+            <article class="project-card project-clickable" data-expand="true">
                 <div class="project-info full-width-info">
                     <span class="project-tag">Course Project</span>
-                    <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot <span class="project-link-icon">&#8599;</span></h3>
+                    <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot <span class="project-link-icon">&#9662;</span></h3>
                     <p class="project-org">Duke University</p>
                     <p>Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
                     <div class="project-details">
@@ -128,6 +172,7 @@
                         <div class="project-tech">
                             <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
                         </div>
+                        <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener" onclick="event.stopPropagation();">&#128279; View on GitHub</a>
                     </div>
                 </div>
             </article>
@@ -236,24 +281,33 @@
     </section>
 
     <!-- Awards Section -->
-    <section class="section section-alt" id="awards">
+    <section class="section" id="awards">
         <div class="container">
             <h2 class="section-title">Awards & Achievements</h2>
             <div class="awards-grid">
-                <div class="award-card">
+                <div class="award-card award-clickable" data-cert="assets/images/cert-mcm-2022.jpg">
                     <div class="award-year">2022</div>
-                    <h3>MCM/ICM Honorable Mention (H)</h3>
+                    <h3>MCM/ICM Honorable Mention (H) <span class="award-expand-icon">&#9662;</span></h3>
                     <p>Mathematical Contest in Modeling — Problem C. Developed mathematical models and data-driven analysis for real-world optimization problems.</p>
+                    <div class="award-cert-wrapper">
+                        <img src="assets/images/cert-mcm-2022.jpg" alt="MCM/ICM 2022 Certificate" class="award-cert-img">
+                    </div>
                 </div>
-                <div class="award-card">
+                <div class="award-card award-clickable" data-cert="assets/images/cert-mcm-2021.jpg">
                     <div class="award-year">2021</div>
-                    <h3>MCM/ICM Meritorious Winner (M)</h3>
+                    <h3>MCM/ICM Meritorious Winner (M) <span class="award-expand-icon">&#9662;</span></h3>
                     <p>Mathematical Contest in Modeling — Problem A. Achieved First Prize level recognition for outstanding mathematical modeling and analysis.</p>
+                    <div class="award-cert-wrapper">
+                        <img src="assets/images/cert-mcm-2021.jpg" alt="MCM/ICM 2021 Certificate" class="award-cert-img">
+                    </div>
                 </div>
-                <div class="award-card">
+                <div class="award-card award-clickable" data-cert="assets/images/cert-robotics-2021.jpg">
                     <div class="award-year">2021</div>
-                    <h3>China Robotics Competition — Second Prize</h3>
+                    <h3>China Robotics Competition — Second Prize <span class="award-expand-icon">&#9662;</span></h3>
                     <p>FIRA Small Group Simulation 5v5 category. Designed multi-agent coordination strategies for autonomous robot soccer.</p>
+                    <div class="award-cert-wrapper">
+                        <img src="assets/images/cert-robotics-2021.jpg" alt="China Robotics Competition Certificate" class="award-cert-img">
+                    </div>
                 </div>
             </div>
         </div>
