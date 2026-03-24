@@ -451,6 +451,14 @@ body {
     border-color: var(--color-accent);
 }
 
+.project-no-panel {
+    cursor: default;
+}
+
+.project-card .project-github-link {
+    margin-top: 1.25rem;
+}
+
 .project-header {
     display: flex;
     justify-content: space-between;

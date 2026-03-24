@@ -117,14 +117,14 @@
                             <p class="exp-role">Robot Software Engineer</p>
                         </div>
                         <div class="exp-meta">
-                            <span class="exp-period">Oct 2024 — Aug 2025</span>
+                            <span class="exp-period">Oct 2024 — Jul 2025</span>
                             <span class="exp-location">Shenzhen, Guangdong, China</span>
                         </div>
                     </div>
                     <ul class="exp-highlights">
-                        <li>Architected the main control software for a logistics robot using C++, synchronizing 3D vision and hardware modules for automated operations in complex environments</li>
-                        <li>Engineered a custom motion planning algorithm integrating Oriented Bounding Box (OBB) constraints to resolve kinematic challenges within confined truck spaces</li>
-                        <li>Optimized trajectory generation time to &lt;80 ms, outperforming standard OMPL solvers in narrow-passage scenarios while ensuring zero-collision safety</li>
+                        <li>Developed motion control interfaces for dual Aubo robotic arms, implementing multi-solution IK filtering based on reference joint angles and 60° end-tool offset compensation</li>
+                        <li>Built motion planning and collision detection modules for confined container spaces using OBB + Separating Axis Theorem; designed a three-tier fallback strategy (Cartesian incremental planning → joint interpolation → RRT) with ~30ms typical planning time</li>
+                        <li>Developed 3D vision communication interfaces and main controller scheduling logic via TCP/JSON protocol; built an async logging system with spdlog for full-process state tracking and on-site debugging</li>
                     </ul>
                 </div>
                 <div class="exp-card">
@@ -153,23 +153,44 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
-            <article class="project-card" data-panel="unitree">
+            <article class="project-card project-no-panel">
                 <div class="project-header">
                     <div>
                         <span class="project-tag">Course Project</span>
-                        <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot <span class="project-open-hint">&#8594;</span></h3>
+                        <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot</h3>
                         <p class="project-org">Duke University</p>
                     </div>
-                    <span class="project-period">Jan 2026 — Apr 2026</span>
+                    <span class="project-period">Feb 2026 — Mar 2026</span>
                 </div>
-                <p>Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
+                <p>Designed and trained LSTM-PPO deep reinforcement learning locomotion policies enabling a 35kg, 12-DOF humanoid robot to maintain stable walking under sustained time-varying wind disturbances (up to 18 m/s, Beaufort scale 8), achieving 100% survival rate across all 84 test scenarios.</p>
                 <ul class="project-highlights">
-                    <li>Trained walking policies using reinforcement learning in simulation</li>
-                    <li>Evaluated robustness against external wind perturbations</li>
-                    <li>Analyzed error bounds and convergence properties of RL algorithms</li>
+                    <li>Built a three-layer physical wind model (base wind + OU turbulence + gusts) with per-rigid-body aerodynamic force computation; designed a 6-stage curriculum learning controller, improving extreme wind survival rate from 48% to 100%</li>
+                    <li>Designed 15+ reward functions and completed 5 ablation studies (420 evaluations) to quantify individual component contributions</li>
+                    <li>Built 4096 parallel GPU simulation environments in Isaac Gym with asymmetric Actor-Critic architecture (~250K parameters); validated via sim-to-sim transfer in MuJoCo with multi-dimensional domain randomization</li>
                 </ul>
                 <div class="project-tech">
-                    <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
+                    <span>Reinforcement Learning</span><span>Isaac Gym</span><span>MuJoCo</span><span>PPO</span><span>LSTM</span><span>Python</span>
+                </div>
+                <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener">&#128279; View on GitHub</a>
+            </article>
+
+            <article class="project-card project-no-panel">
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Course Project</span>
+                        <h3>AI-Driven Autonomous Robot "Mastermind" Game System</h3>
+                        <p class="project-org">Duke University</p>
+                    </div>
+                    <span class="project-period">Oct 2025 — Dec 2025</span>
+                </div>
+                <p>Built an autonomous robotic system that plays the Mastermind board game using AI reasoning and robotic manipulation.</p>
+                <ul class="project-highlights">
+                    <li>Designed a five-node closed-loop architecture based on ROS 2 and Python, defining 3 custom message types with asynchronous inter-node communication and state coordination</li>
+                    <li>Built a reasoning agent via ChatGPT API that dynamically generates guessing strategies from historical feedback; implemented real-time 6-color peg detection and sorting using OpenCV HSV segmentation</li>
+                    <li>Controlled Kinova Gen3 Lite robotic arm via MoveIt 2 for autonomous pick-and-place, with end-to-end validation in both Gazebo simulation and physical hardware</li>
+                </ul>
+                <div class="project-tech">
+                    <span>ROS 2</span><span>MoveIt 2</span><span>Python</span><span>OpenCV</span><span>ChatGPT API</span><span>Gazebo</span><span>Kinova Gen3</span>
                 </div>
             </article>
 
@@ -180,17 +201,16 @@
                         <h3>Intelligent Palletizing & Depalletizing Robot <span class="project-open-hint">&#8594;</span></h3>
                         <p class="project-org">Tsinghua University Research Institute in Shenzhen</p>
                     </div>
-                    <span class="project-period">Oct 2024 — Aug 2025</span>
+                    <span class="project-period">Oct 2024 — Jul 2025</span>
                 </div>
-                <p>Led the full-stack software development of an autonomous palletizing/depalletizing robot system for logistics automation.</p>
+                <p>Led the software development for an autonomous logistics robot with dual Aubo robotic arms, covering motion control, path planning, 3D vision integration, and system-level debugging infrastructure.</p>
                 <ul class="project-highlights">
-                    <li>Designed the complete software architecture including communication layer, task control, vision pipeline, and motion planning</li>
-                    <li>Implemented a finite state machine for robust task execution with dynamic step registration</li>
-                    <li>Integrated vision-based box detection with suction-based grasping (top & side suction)</li>
-                    <li>Deployed on real hardware with RS485 serial communication and TCP-based remote control</li>
+                    <li>Developed motion control interfaces for dual Aubo arms with multi-solution IK filtering and 60° end-tool offset compensation</li>
+                    <li>Built motion planning and collision detection for confined container spaces using OBB + Separating Axis Theorem with ~30ms planning time</li>
+                    <li>Developed 3D vision communication interfaces via TCP/JSON and async logging system with spdlog</li>
                 </ul>
                 <div class="project-tech">
-                    <span>C++</span><span>Motion Planning</span><span>Computer Vision</span><span>TCP/Serial</span><span>FSM</span>
+                    <span>C++</span><span>Motion Planning</span><span>OBB Collision Detection</span><span>TCP/JSON</span><span>spdlog</span>
                 </div>
             </article>
 
@@ -248,7 +268,7 @@
     <template id="tmpl-tsinghua">
         <span class="project-tag">Industry Project</span>
         <h2>Intelligent Palletizing & Depalletizing Robot</h2>
-        <p class="panel-org">Tsinghua University Research Institute in Shenzhen &middot; Oct 2024 — Aug 2025</p>
+        <p class="panel-org">Tsinghua University Research Institute in Shenzhen &middot; Oct 2024 — Jul 2025</p>
         <div class="panel-images">
             <img src="assets/images/SZTHU/palletize-2.png" alt="Intelligent palletizing robot simulation">
             <div class="panel-images-row">
@@ -256,19 +276,12 @@
                 <img src="assets/images/SZTHU/palletize-system.png" alt="Robot arm 3D model in simulation">
             </div>
         </div>
-        <p class="panel-desc">Led the full-stack software development of an autonomous palletizing/depalletizing robot system for logistics automation. The system replaces manual labor in loading and unloading cargo from trucks.</p>
+        <p class="panel-desc">Led the software development for an autonomous logistics robot with dual Aubo robotic arms, covering motion control, path planning, 3D vision integration, and system-level debugging infrastructure.</p>
         <h3>Work Highlights</h3>
         <ul class="panel-highlights">
-            <li>Architected the main control software for a logistics robot using C++, synchronizing 3D vision and hardware modules for automated operations in complex environments</li>
-            <li>Engineered a custom motion planning algorithm integrating Oriented Bounding Box (OBB) constraints to resolve kinematic challenges within confined truck spaces</li>
-            <li>Optimized trajectory generation time to &lt;80 ms, outperforming standard OMPL solvers in narrow-passage scenarios while ensuring zero-collision safety</li>
-        </ul>
-        <h3>Project Details</h3>
-        <ul class="panel-highlights">
-            <li>Designed the complete software architecture including communication layer, task control, vision pipeline, and motion planning</li>
-            <li>Implemented a finite state machine for robust task execution with dynamic step registration</li>
-            <li>Integrated vision-based box detection with suction-based grasping (top & side suction)</li>
-            <li>Deployed on real hardware with RS485 serial communication and TCP-based remote control</li>
+            <li>Developed motion control interfaces for dual Aubo robotic arms, implementing multi-solution IK filtering based on reference joint angles and 60° end-tool offset compensation, resolving IK configuration selection and joint limit issues</li>
+            <li>Built motion planning and collision detection modules for confined container spaces: OBB + Separating Axis Theorem for arm-to-wall, cargo, and self-collision detection during motion; designed a three-tier fallback strategy (Cartesian incremental → joint interpolation → RRT) with ~30ms typical planning time</li>
+            <li>Developed 3D vision communication interfaces and main controller scheduling logic via TCP/JSON protocol for camera control, model loading, and multi-SKU pose acquisition; built an async logging system with spdlog supporting file rotation and multi-level output for full-process state tracking</li>
         </ul>
         <h3>Software Architecture</h3>
         <img src="assets/images/SZTHU/palletize-diagram.png" alt="System architecture diagram" class="panel-full-img">
@@ -278,25 +291,8 @@
             <li>Driver Layer: Vision control, motion planning interface, and serial communication</li>
         </ul>
         <div class="project-tech">
-            <span>C++</span><span>Motion Planning</span><span>Computer Vision</span><span>TCP/Serial</span><span>FSM</span>
+            <span>C++</span><span>Motion Planning</span><span>OBB Collision Detection</span><span>TCP/JSON</span><span>spdlog</span>
         </div>
-    </template>
-
-    <template id="tmpl-unitree">
-        <span class="project-tag">Course Project</span>
-        <h2>Wind-Robust Walking for Unitree G1 Humanoid Robot</h2>
-        <p class="panel-org">Duke University &middot; Jan 2026 — Apr 2026</p>
-        <p class="panel-desc">Investigated reinforcement learning approaches for enabling stable bipedal walking under wind disturbances on the Unitree G1 humanoid robot platform.</p>
-        <h3>Highlights</h3>
-        <ul class="panel-highlights">
-            <li>Trained walking policies using reinforcement learning in simulation</li>
-            <li>Evaluated robustness against external wind perturbations</li>
-            <li>Analyzed error bounds and convergence properties of RL algorithms</li>
-        </ul>
-        <div class="project-tech">
-            <span>Reinforcement Learning</span><span>Simulation</span><span>Unitree G1</span><span>Python</span>
-        </div>
-        <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener">&#128279; View on GitHub</a>
     </template>
 
     <template id="tmpl-surgery">
