@@ -687,6 +687,25 @@ body {
     object-fit: cover;
 }
 
+.panel-video {
+    margin: 0;
+}
+
+.panel-video video {
+    width: 100%;
+    border-radius: 8px;
+    background: #000;
+    display: block;
+}
+
+.panel-video figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    line-height: 1.5;
+}
+
 .panel-images-row {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -153,6 +153,26 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
 
+            <article class="project-card" data-panel="diffusion">
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Research</span>
+                        <h3>Diffusion-Based Robot Learning for Contact-Rich Manipulation <span class="project-open-hint">&#8594;</span></h3>
+                        <p class="project-org">Duke University</p>
+                    </div>
+                    <span class="project-period">Apr 2026 — Present</span>
+                </div>
+                <p>End-to-end imitation learning pipeline on Franka FR3 with Bota F/T sensor and RGB camera for contact-rich tasks (vase wiping, pivoting, plate wiping); trained an Adaptive Compliance Policy alongside a Diffusion Policy baseline.</p>
+                <ul class="project-highlights">
+                    <li>Collected 200+ demonstration episodes and developed a 3-stage data processing pipeline for policy training</li>
+                    <li>Implemented low-level control infrastructure as C++ ros2_control plugins, including a Cartesian admittance controller and a hybrid force–position controller for compliant interaction</li>
+                    <li>ACP successfully modulates stiffness upon contact and executes compliant behaviors, while the DP baseline remains stiff and overshoots on contact transitions</li>
+                </ul>
+                <div class="project-tech">
+                    <span>Diffusion Policy</span><span>Imitation Learning</span><span>ros2_control</span><span>C++</span><span>Franka FR3</span><span>Force/Compliance Control</span>
+                </div>
+            </article>
+
             <article class="project-card project-no-panel">
                 <div class="project-header">
                     <div>
@@ -265,6 +285,36 @@
     </aside>
 
     <!-- Templates -->
+    <template id="tmpl-diffusion">
+        <span class="project-tag">Research</span>
+        <h2>Diffusion-Based Robot Learning for Contact-Rich Manipulation</h2>
+        <p class="panel-org">Duke University &middot; Apr 2026 — Present</p>
+        <div class="panel-images">
+            <figure class="panel-video">
+                <video autoplay muted loop playsinline preload="metadata">
+                    <source src="assets/images/Diffusion%20policy/wiping.mp4" type="video/mp4">
+                </video>
+                <figcaption>Plate wiping — Adaptive Compliance Policy maintains compliant contact with the surface</figcaption>
+            </figure>
+            <figure class="panel-video">
+                <video autoplay muted loop playsinline preload="metadata">
+                    <source src="assets/images/Diffusion%20policy/pivoting.mp4" type="video/mp4">
+                </video>
+                <figcaption>Pivoting — modulating stiffness during contact transitions</figcaption>
+            </figure>
+        </div>
+        <p class="panel-desc">Built an end-to-end imitation learning pipeline on a Franka FR3 with a Bota F/T sensor and RGB camera for contact-rich manipulation. Trained an Adaptive Compliance Policy (ACP) alongside a Diffusion Policy (DP) baseline to study compliant behavior on tasks like vase wiping, pivoting, and plate wiping.</p>
+        <h3>Highlights</h3>
+        <ul class="panel-highlights">
+            <li>Collected 200+ demonstration episodes across multiple contact-rich tasks; developed a 3-stage data processing pipeline (raw → aligned → policy-ready) for training</li>
+            <li>Implemented low-level control infrastructure as C++ ros2_control plugins, including a Cartesian admittance controller and a hybrid force–position controller for compliant interaction with the environment</li>
+            <li>Trained an Adaptive Compliance Policy alongside a Diffusion Policy baseline; ACP successfully modulates stiffness upon contact and executes compliant behaviors, while DP remains stiff and overshoots on contact transitions</li>
+        </ul>
+        <div class="project-tech">
+            <span>Diffusion Policy</span><span>Imitation Learning</span><span>ros2_control</span><span>C++</span><span>Franka FR3</span><span>Force/Compliance Control</span><span>Python</span>
+        </div>
+    </template>
+
     <template id="tmpl-tsinghua">
         <span class="project-tag">Industry Project</span>
         <h2>Intelligent Palletizing & Depalletizing Robot</h2>
