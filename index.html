@@ -9,255 +9,269 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">SY</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
+    <!-- Top Navigation (inline academic style) -->
+    <nav class="topnav">
+        <div class="topnav-inner">
+            <a href="#top" class="topnav-name">Steven Yang</a>
+            <ul class="topnav-links">
+                <li><a href="#news">News</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1 class="hero-name">Steven Yang</h1>
-                <p class="hero-title">Robotics Engineer</p>
-                <p class="hero-desc">Master's student at Duke University specializing in robotics, computer vision, and intelligent control systems. Passionate about building robots that interact with the real world.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-avatar">
-                    <img src="assets/images/Me/Me.PNG" alt="Steven Yang">
-                </div>
-            </div>
-        </div>
-    </section>
+    <main class="page" id="top">
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I'm a Master of Engineering student at <strong>Duke University</strong>, focusing on robotics and intelligent systems. My research spans surgical robotics, industrial automation, and reinforcement learning.</p>
-                    <p>Previously, I worked at the <strong>Shenzhen Tsinghua University Research Institute</strong>, where I led the software development of an intelligent palletizing/depalletizing robot system — from architecture design to real-world deployment.</p>
-                    <p>I enjoy tackling challenging problems at the intersection of perception, planning, and control.</p>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon">&#9881;</div>
-                        <h3>Robotics</h3>
-                        <p>Motion planning, kinematics, ROS, UR robots, robotic manipulation</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">&#128065;</div>
-                        <h3>Computer Vision</h3>
-                        <p>Object detection, pose estimation, ConvLSTM, visual servoing</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">&#129302;</div>
-                        <h3>AI / ML</h3>
-                        <p>Reinforcement learning, deep learning, PyTorch, simulation</p>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon">&#128187;</div>
-                        <h3>Software</h3>
-                        <p>C++, Python, embedded systems, system architecture design</p>
-                    </div>
-                </div>
+        <!-- Profile / Hero -->
+        <section class="profile">
+            <div class="profile-photo">
+                <img src="assets/images/Me/Me.PNG" alt="Steven Yang">
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section section-alt" id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="edu-card">
-                    <div class="edu-period">2025 — 2026</div>
-                    <h3>Duke University</h3>
-                    <p class="edu-degree">Master of Engineering — Mechanical Engineering</p>
-                    <p class="edu-courses">Relevant Coursework: Data-Driven Dynamics, Reinforcement Learning, Computer Vision</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-period">2019 — 2023</div>
-                    <h3>Northeastern University</h3>
-                    <p class="edu-degree">Bachelor of Engineering — Robotics</p>
-                    <p class="edu-courses">Relevant Coursework: Robot Operating System, Mechatronics, Robot Perception and Human-Computer Interaction</p>
-                </div>
+            <div class="profile-text">
+                <h1>Steven Yang <span class="profile-cn">杨晨毅</span></h1>
+                <p class="profile-affil">Master of Engineering, <a href="https://www.duke.edu/" target="_blank" rel="noopener">Duke University</a></p>
+                <p class="profile-bio">
+                    I am a Master's student at Duke University working on <em>robotics, computer vision, and intelligent control systems</em>. My interests span robot learning, manipulation, humanoid locomotion, and visual servoing.
+                </p>
+                <p class="profile-bio">
+                    Previously, I was a Robot Software Engineer at the <a href="https://www.tsinghua-sz.org/" target="_blank" rel="noopener">Tsinghua University Research Institute in Shenzhen</a>, where I led the software development of an intelligent palletizing/depalletizing robot. Before that, I worked on R&D quality at <a href="https://www.bydglobal.com/" target="_blank" rel="noopener">BYD</a> and earned my BEng in Robotics from Northeastern University.
+                </p>
+                <p class="profile-bio">
+                    I am currently looking for <strong>Summer 2026 internship</strong> opportunities in robotics, computer vision, and AI.
+                </p>
+                <p class="profile-links">
+                    <a href="mailto:cy238@duke.edu">Email</a> /
+                    <a href="https://github.com/Stephen-Ryan666" target="_blank" rel="noopener">GitHub</a> /
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> /
+                    <a href="#projects">Projects</a> /
+                    <a href="#contact">Contact</a>
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="exp-card exp-clickable" data-panel="tsinghua">
-                    <div class="exp-header">
-                        <div>
-                            <h3>Tsinghua University Research Institute in Shenzhen <span class="exp-open-hint">&#8594;</span></h3>
-                            <p class="exp-role">Robot Software Engineer</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-period">Oct 2024 — Jul 2025</span>
-                            <span class="exp-location">Shenzhen, Guangdong, China</span>
-                        </div>
-                    </div>
-                    <ul class="exp-highlights">
-                        <li>Developed motion control interfaces for dual Aubo robotic arms, implementing multi-solution IK filtering based on reference joint angles and 60° end-tool offset compensation</li>
-                        <li>Built motion planning and collision detection modules for confined container spaces using OBB + Separating Axis Theorem; designed a three-tier fallback strategy (Cartesian incremental planning → joint interpolation → RRT) with ~30ms typical planning time</li>
-                        <li>Developed 3D vision communication interfaces and main controller scheduling logic via TCP/JSON protocol; built an async logging system with spdlog for full-process state tracking and on-site debugging</li>
+        <!-- News -->
+        <section class="block" id="news">
+            <h2 class="block-title">News</h2>
+            <ul class="news-list">
+                <li><span class="news-date">Mar 2026</span> Completed <a href="#projects">Wind-Robust Walking</a> for Unitree G1 — 100% survival rate under 18 m/s wind across all 84 test scenarios.</li>
+                <li><span class="news-date">Dec 2025</span> Built an AI-driven autonomous robot that plays the Mastermind board game using ROS 2 + ChatGPT reasoning.</li>
+                <li><span class="news-date">Aug 2025</span> Started the M.Eng. program in Mechanical Engineering at <strong>Duke University</strong>.</li>
+                <li><span class="news-date">Jul 2025</span> Wrapped up the intelligent palletizing robot project at <a href="#experience">Tsinghua Shenzhen</a> after 9 months of system development and on-site deployment.</li>
+                <li><span class="news-date">Oct 2024</span> Joined the <strong>Tsinghua University Research Institute in Shenzhen</strong> as a Robot Software Engineer.</li>
+            </ul>
+        </section>
+
+        <!-- Projects / Research -->
+        <section class="block" id="projects">
+            <h2 class="block-title">Projects &amp; Research</h2>
+
+            <article class="entry">
+                <div class="entry-img entry-img-placeholder">
+                    <div class="placeholder-text">Wind-Robust<br>Locomotion</div>
+                </div>
+                <div class="entry-text">
+                    <a class="entry-title" href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" target="_blank" rel="noopener">Wind-Robust Walking for Unitree G1 Humanoid Robot</a>
+                    <p class="entry-meta">Steven Yang. <em>Course Project, Duke University.</em> Feb 2026 – Mar 2026.</p>
+                    <p class="entry-desc">Designed and trained LSTM-PPO deep RL locomotion policies enabling a 35 kg, 12-DOF humanoid to maintain stable walking under sustained time-varying wind disturbances (up to 18 m/s, Beaufort 8), achieving 100% survival rate across all 84 test scenarios.</p>
+                    <p class="entry-quote">"The chart on the right is the most interesting finding — exp3 and exp5 both survive 100%, but exp3 actively leans into the wind while exp5 doesn't. PPO found an alternative: stepping instead of leaning. Reward shaping shapes <em>how</em> the robot survives, not <em>whether</em> it survives."</p>
+                    <ul class="entry-bullets">
+                        <li>Three-layer physical wind model (base wind + OU turbulence + gusts) with per-rigid-body aerodynamic force computation</li>
+                        <li>Six-stage curriculum learning controller, improving extreme wind survival rate from 48% to 100%</li>
+                        <li>15+ reward functions and 5 ablation studies (420 evaluations) to quantify component contributions</li>
+                        <li>4096 parallel GPU envs in Isaac Gym; sim-to-sim transfer in MuJoCo with multi-dim domain randomization</li>
+                    </ul>
+                    <p class="entry-tags">Reinforcement Learning · Isaac Gym · MuJoCo · PPO · LSTM · Python</p>
+                    <p class="entry-links">
+                        <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" target="_blank" rel="noopener">code</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-img entry-img-placeholder">
+                    <div class="placeholder-text">Mastermind<br>ROS 2</div>
+                </div>
+                <div class="entry-text">
+                    <span class="entry-title">AI-Driven Autonomous Robot "Mastermind" Game System</span>
+                    <p class="entry-meta">Steven Yang. <em>Course Project, Duke University.</em> Oct 2025 – Dec 2025.</p>
+                    <p class="entry-desc">Built an autonomous robotic system that plays the Mastermind board game end-to-end using AI reasoning and robotic manipulation.</p>
+                    <ul class="entry-bullets">
+                        <li>Five-node closed-loop architecture in ROS 2 + Python with 3 custom message types and async coordination</li>
+                        <li>ChatGPT-powered reasoning agent that dynamically generates guessing strategies from historical feedback</li>
+                        <li>Real-time 6-color peg detection via OpenCV HSV segmentation; pick-and-place on Kinova Gen3 Lite via MoveIt 2</li>
+                        <li>End-to-end validation in both Gazebo simulation and physical hardware</li>
+                    </ul>
+                    <p class="entry-tags">ROS 2 · MoveIt 2 · Python · OpenCV · ChatGPT API · Gazebo · Kinova Gen3</p>
+                </div>
+            </article>
+
+            <article class="entry entry-clickable" data-panel="tsinghua">
+                <div class="entry-img">
+                    <img src="assets/images/SZTHU/palletize-2.png" alt="Intelligent palletizing robot simulation">
+                </div>
+                <div class="entry-text">
+                    <span class="entry-title entry-title-link">Intelligent Palletizing &amp; Depalletizing Robot <span class="entry-arrow">→</span></span>
+                    <p class="entry-meta">Steven Yang. <em>Industry Project, Tsinghua University Research Institute in Shenzhen.</em> Oct 2024 – Jul 2025.</p>
+                    <p class="entry-desc">Led software development for an autonomous logistics robot with dual Aubo robotic arms — motion control, path planning, 3D vision integration, and system-level debugging infrastructure.</p>
+                    <ul class="entry-bullets">
+                        <li>Motion control interfaces for dual Aubo arms with multi-solution IK filtering and 60° end-tool offset compensation</li>
+                        <li>Motion planning &amp; collision detection for confined container spaces using OBB + Separating Axis Theorem (~30 ms planning)</li>
+                        <li>3D vision communication via TCP/JSON and async logging system with spdlog</li>
+                    </ul>
+                    <p class="entry-tags">C++ · Motion Planning · OBB Collision Detection · TCP/JSON · spdlog</p>
+                    <p class="entry-links"><span class="entry-more">click for details →</span></p>
+                </div>
+            </article>
+
+            <article class="entry entry-clickable" data-panel="surgery">
+                <div class="entry-img">
+                    <img src="assets/images/Surgery%20robot/surgery-picture1.gif" alt="Surgical tool tracking">
+                </div>
+                <div class="entry-text">
+                    <span class="entry-title entry-title-link">Surgical Robot — Visual Servoing &amp; Tool Detection <span class="entry-arrow">→</span></span>
+                    <p class="entry-meta">Steven Yang. <em>Research, Northeastern University.</em> Sep 2022 – Jun 2023.</p>
+                    <p class="entry-desc">Developed a visual servoing system for surgical robotic arm control using AprilTag-based pose estimation, combined with deep-learning-based surgical tool detection using ConvLSTM networks.</p>
+                    <ul class="entry-bullets">
+                        <li>Position-Based Visual Servoing (PBVS) with AprilTag recognition and Kalman filtering</li>
+                        <li>ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
+                        <li>Encoder feedback for closed-loop joint control</li>
+                    </ul>
+                    <p class="entry-tags">Python · PyTorch · OpenCV · Visual Servoing · ConvLSTM</p>
+                    <p class="entry-links"><span class="entry-more">click for details →</span></p>
+                </div>
+            </article>
+
+            <article class="entry entry-clickable" data-panel="soccer">
+                <div class="entry-img">
+                    <img src="assets/images/soccer%20robot/soccer-robot.png" alt="FIRA 5v5 robot soccer simulation">
+                </div>
+                <div class="entry-text">
+                    <span class="entry-title entry-title-link">FIRA Robot Soccer — 5v5 Simulation <span class="entry-arrow">→</span></span>
+                    <p class="entry-meta">Steven Yang. <em>Competition, 2021 China Robotics Competition.</em> Mar 2021 – Jul 2021.</p>
+                    <p class="entry-desc">Multi-agent coordination strategies for a 5v5 robot soccer simulation: formation control, ball tracking, and cooperative decision-making algorithms. <strong>Second Prize</strong> in FIRA Small Group Simulation.</p>
+                    <p class="entry-tags">Multi-Agent Systems · Strategy Design · Simulation</p>
+                    <p class="entry-links"><span class="entry-more">click for details →</span></p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Experience -->
+        <section class="block" id="experience">
+            <h2 class="block-title">Professional Experience</h2>
+
+            <div class="exp-row exp-clickable" data-panel="tsinghua">
+                <div class="exp-when">Oct 2024 – Jul 2025</div>
+                <div class="exp-body">
+                    <p class="exp-place">Tsinghua University Research Institute in Shenzhen <span class="entry-arrow">→</span></p>
+                    <p class="exp-role">Robot Software Engineer · Shenzhen, China</p>
+                    <ul class="entry-bullets">
+                        <li>Motion control for dual Aubo arms with multi-solution IK filtering and 60° end-tool offset compensation</li>
+                        <li>Motion planning + collision detection (OBB + SAT) with three-tier fallback (Cartesian → joint interp → RRT), ~30 ms planning</li>
+                        <li>TCP/JSON 3D vision interfaces and async spdlog system for full-process state tracking</li>
                     </ul>
                 </div>
-                <div class="exp-card">
-                    <div class="exp-header">
-                        <div>
-                            <h3>BYD Co., Ltd</h3>
-                            <p class="exp-role">R&D Quality Control Engineer</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-period">Jul 2023 — Sep 2024</span>
-                            <span class="exp-location">Shenzhen, Guangdong, China</span>
-                        </div>
-                    </div>
-                    <ul class="exp-highlights">
-                        <li>Led the R&D quality management for the "Seagull" EV export project, ensuring compliance with European regulatory standards and internal quality requirements</li>
-                        <li>Defined and executed 7 key Quality Gate criteria, serving as the primary lead for project status reporting and risk assessment in 4 major milestone reviews</li>
-                        <li>Conducted rigorous root cause analysis and issue tracking during Design Validation (DV) and Process Validation (PV) phases, significantly reducing defects during trial production</li>
+            </div>
+
+            <div class="exp-row">
+                <div class="exp-when">Jul 2023 – Sep 2024</div>
+                <div class="exp-body">
+                    <p class="exp-place">BYD Co., Ltd</p>
+                    <p class="exp-role">R&amp;D Quality Control Engineer · Shenzhen, China</p>
+                    <ul class="entry-bullets">
+                        <li>Led R&amp;D quality management for the "Seagull" EV export project, ensuring European regulatory compliance</li>
+                        <li>Defined and executed 7 key Quality Gate criteria; primary lead for 4 milestone reviews</li>
+                        <li>Root cause analysis and issue tracking during DV/PV phases, significantly reducing trial-production defects</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="section section-alt" id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
+        <!-- Education -->
+        <section class="block" id="education">
+            <h2 class="block-title">Education</h2>
 
-            <article class="project-card project-no-panel">
-                <div class="project-header">
-                    <div>
-                        <span class="project-tag">Course Project</span>
-                        <h3>Wind-Robust Walking for Unitree G1 Humanoid Robot</h3>
-                        <p class="project-org">Duke University</p>
+            <div class="exp-row">
+                <div class="exp-when">2025 – 2026</div>
+                <div class="exp-body">
+                    <p class="exp-place">Duke University</p>
+                    <p class="exp-role">Master of Engineering, Mechanical Engineering</p>
+                    <p class="exp-note">Coursework: Data-Driven Dynamics, Reinforcement Learning, Computer Vision.</p>
+                </div>
+            </div>
+
+            <div class="exp-row">
+                <div class="exp-when">2019 – 2023</div>
+                <div class="exp-body">
+                    <p class="exp-place">Northeastern University</p>
+                    <p class="exp-role">Bachelor of Engineering, Robotics</p>
+                    <p class="exp-note">Coursework: Robot Operating System, Mechatronics, Robot Perception &amp; Human-Computer Interaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills (compact inline) -->
+        <section class="block" id="skills">
+            <h2 class="block-title">Research Interests &amp; Skills</h2>
+            <p class="skills-line"><strong>Robotics:</strong> motion planning, kinematics, ROS / ROS 2, UR / Aubo / Kinova arms, manipulation</p>
+            <p class="skills-line"><strong>Computer Vision:</strong> object detection, pose estimation, ConvLSTM, visual servoing, AprilTag</p>
+            <p class="skills-line"><strong>Learning:</strong> reinforcement learning (PPO), deep learning, Isaac Gym, MuJoCo, PyTorch, sim-to-real</p>
+            <p class="skills-line"><strong>Software:</strong> C++, Python, embedded systems, system architecture, TCP/JSON, spdlog</p>
+        </section>
+
+        <!-- Awards -->
+        <section class="block" id="awards">
+            <h2 class="block-title">Awards &amp; Achievements</h2>
+
+            <div class="award-row award-clickable" data-cert="assets/images/Math%20competition/cert-mcm-2022.jpg">
+                <div class="exp-when">2022</div>
+                <div class="exp-body">
+                    <p class="exp-place">MCM/ICM Honorable Mention (H) <span class="entry-arrow">▾</span></p>
+                    <p class="exp-note">Mathematical Contest in Modeling — Problem C. Mathematical models and data-driven analysis for real-world optimization.</p>
+                    <div class="award-cert-wrapper">
+                        <img src="assets/images/Math%20competition/cert-mcm-2022.jpg" alt="MCM/ICM 2022 Certificate" class="award-cert-img">
                     </div>
-                    <span class="project-period">Feb 2026 — Mar 2026</span>
                 </div>
-                <p>Designed and trained LSTM-PPO deep reinforcement learning locomotion policies enabling a 35kg, 12-DOF humanoid robot to maintain stable walking under sustained time-varying wind disturbances (up to 18 m/s, Beaufort scale 8), achieving 100% survival rate across all 84 test scenarios.</p>
-                <ul class="project-highlights">
-                    <li>Built a three-layer physical wind model (base wind + OU turbulence + gusts) with per-rigid-body aerodynamic force computation; designed a 6-stage curriculum learning controller, improving extreme wind survival rate from 48% to 100%</li>
-                    <li>Designed 15+ reward functions and completed 5 ablation studies (420 evaluations) to quantify individual component contributions</li>
-                    <li>Built 4096 parallel GPU simulation environments in Isaac Gym with asymmetric Actor-Critic architecture (~250K parameters); validated via sim-to-sim transfer in MuJoCo with multi-dimensional domain randomization</li>
-                </ul>
-                <div class="project-tech">
-                    <span>Reinforcement Learning</span><span>Isaac Gym</span><span>MuJoCo</span><span>PPO</span><span>LSTM</span><span>Python</span>
-                </div>
-                <a href="https://github.com/Jake-Liu-Robot/Wind_Robust_Walking_for_the_Unitree_G1" class="project-github-link" target="_blank" rel="noopener">&#128279; View on GitHub</a>
-            </article>
+            </div>
 
-            <article class="project-card project-no-panel">
-                <div class="project-header">
-                    <div>
-                        <span class="project-tag">Course Project</span>
-                        <h3>AI-Driven Autonomous Robot "Mastermind" Game System</h3>
-                        <p class="project-org">Duke University</p>
+            <div class="award-row award-clickable" data-cert="assets/images/Math%20competition/cert-mcm-2021.jpg">
+                <div class="exp-when">2021</div>
+                <div class="exp-body">
+                    <p class="exp-place">MCM/ICM Meritorious Winner (M) <span class="entry-arrow">▾</span></p>
+                    <p class="exp-note">Mathematical Contest in Modeling — Problem A. First-Prize-level recognition for outstanding modeling and analysis.</p>
+                    <div class="award-cert-wrapper">
+                        <img src="assets/images/Math%20competition/cert-mcm-2021.jpg" alt="MCM/ICM 2021 Certificate" class="award-cert-img">
                     </div>
-                    <span class="project-period">Oct 2025 — Dec 2025</span>
                 </div>
-                <p>Built an autonomous robotic system that plays the Mastermind board game using AI reasoning and robotic manipulation.</p>
-                <ul class="project-highlights">
-                    <li>Designed a five-node closed-loop architecture based on ROS 2 and Python, defining 3 custom message types with asynchronous inter-node communication and state coordination</li>
-                    <li>Built a reasoning agent via ChatGPT API that dynamically generates guessing strategies from historical feedback; implemented real-time 6-color peg detection and sorting using OpenCV HSV segmentation</li>
-                    <li>Controlled Kinova Gen3 Lite robotic arm via MoveIt 2 for autonomous pick-and-place, with end-to-end validation in both Gazebo simulation and physical hardware</li>
-                </ul>
-                <div class="project-tech">
-                    <span>ROS 2</span><span>MoveIt 2</span><span>Python</span><span>OpenCV</span><span>ChatGPT API</span><span>Gazebo</span><span>Kinova Gen3</span>
-                </div>
-            </article>
+            </div>
 
-            <article class="project-card" data-panel="tsinghua">
-                <div class="project-header">
-                    <div>
-                        <span class="project-tag">Industry Project</span>
-                        <h3>Intelligent Palletizing & Depalletizing Robot <span class="project-open-hint">&#8594;</span></h3>
-                        <p class="project-org">Tsinghua University Research Institute in Shenzhen</p>
-                    </div>
-                    <span class="project-period">Oct 2024 — Jul 2025</span>
+            <div class="award-row">
+                <div class="exp-when">2021</div>
+                <div class="exp-body">
+                    <p class="exp-place">China Robotics Competition — Second Prize</p>
+                    <p class="exp-note">FIRA Small Group Simulation 5v5. Multi-agent coordination strategies for autonomous robot soccer.</p>
                 </div>
-                <p>Led the software development for an autonomous logistics robot with dual Aubo robotic arms, covering motion control, path planning, 3D vision integration, and system-level debugging infrastructure.</p>
-                <ul class="project-highlights">
-                    <li>Developed motion control interfaces for dual Aubo arms with multi-solution IK filtering and 60° end-tool offset compensation</li>
-                    <li>Built motion planning and collision detection for confined container spaces using OBB + Separating Axis Theorem with ~30ms planning time</li>
-                    <li>Developed 3D vision communication interfaces via TCP/JSON and async logging system with spdlog</li>
-                </ul>
-                <div class="project-tech">
-                    <span>C++</span><span>Motion Planning</span><span>OBB Collision Detection</span><span>TCP/JSON</span><span>spdlog</span>
-                </div>
-            </article>
+            </div>
+        </section>
 
-            <article class="project-card" data-panel="surgery">
-                <div class="project-header">
-                    <div>
-                        <span class="project-tag">Research</span>
-                        <h3>Surgical Robot — Visual Servoing & Tool Detection <span class="project-open-hint">&#8594;</span></h3>
-                        <p class="project-org">Northeastern University Research Lab</p>
-                    </div>
-                    <span class="project-period">Sep 2022 — Jun 2023</span>
-                </div>
-                <p>Developed a visual servoing system for surgical robotic arm control using AprilTag-based pose estimation, combined with deep learning-based surgical tool detection using ConvLSTM networks.</p>
-                <ul class="project-highlights">
-                    <li>Implemented Position-Based Visual Servoing (PBVS) with AprilTag recognition and Kalman filtering</li>
-                    <li>Built a ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
-                    <li>Integrated encoder feedback for closed-loop joint control</li>
-                </ul>
-                <div class="project-tech">
-                    <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Visual Servoing</span><span>ConvLSTM</span>
-                </div>
-            </article>
+        <!-- Contact -->
+        <section class="block" id="contact">
+            <h2 class="block-title">Contact</h2>
+            <p class="profile-bio">
+                Feel free to reach out by email at <a href="mailto:cy238@duke.edu">cy238@duke.edu</a>, or find me on
+                <a href="https://github.com/Stephen-Ryan666" target="_blank" rel="noopener">GitHub</a>.
+            </p>
+        </section>
 
-            <article class="project-card" data-panel="soccer">
-                <div class="project-header">
-                    <div>
-                        <span class="project-tag">Competition</span>
-                        <h3>FIRA Robot Soccer — 5v5 Simulation <span class="project-open-hint">&#8594;</span></h3>
-                        <p class="project-org">2021 China Robotics Competition</p>
-                    </div>
-                    <span class="project-period">Mar 2021 — Jul 2021</span>
-                </div>
-                <p>Developed multi-agent coordination strategies for a 5v5 robot soccer simulation. The team designed formation control, ball tracking, and cooperative decision-making algorithms.</p>
-                <ul class="project-highlights">
-                    <li>Designed role assignment and formation strategies for 5 autonomous agents</li>
-                    <li>Implemented real-time ball tracking and predictive interception</li>
-                    <li>Won Second Prize in FIRA Small Group Simulation category</li>
-                </ul>
-                <div class="project-tech">
-                    <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
-                </div>
-            </article>
+        <footer class="footer">
+            <p>&copy; 2026 Steven Yang. Last updated May 2026.</p>
+        </footer>
+    </main>
 
-        </div>
-    </section>
-
-    <!-- Slide-in Panel (shared for projects + experience) -->
+    <!-- Slide-in Panel (kept for project deep dives) -->
     <div class="panel-overlay" id="panelOverlay"></div>
     <aside class="detail-panel" id="detailPanel">
         <button class="panel-close" id="panelClose">&times;</button>
@@ -267,7 +281,7 @@
     <!-- Templates -->
     <template id="tmpl-tsinghua">
         <span class="project-tag">Industry Project</span>
-        <h2>Intelligent Palletizing & Depalletizing Robot</h2>
+        <h2>Intelligent Palletizing &amp; Depalletizing Robot</h2>
         <p class="panel-org">Tsinghua University Research Institute in Shenzhen &middot; Oct 2024 — Jul 2025</p>
         <div class="panel-images">
             <img src="assets/images/SZTHU/palletize-2.png" alt="Intelligent palletizing robot simulation">
@@ -290,14 +304,12 @@
             <li>Communication Layer: TCP server with JSON command parsing and routing</li>
             <li>Driver Layer: Vision control, motion planning interface, and serial communication</li>
         </ul>
-        <div class="project-tech">
-            <span>C++</span><span>Motion Planning</span><span>OBB Collision Detection</span><span>TCP/JSON</span><span>spdlog</span>
-        </div>
+        <p class="entry-tags">C++ · Motion Planning · OBB Collision Detection · TCP/JSON · spdlog</p>
     </template>
 
     <template id="tmpl-surgery">
         <span class="project-tag">Research</span>
-        <h2>Surgical Robot — Visual Servoing & Tool Detection</h2>
+        <h2>Surgical Robot — Visual Servoing &amp; Tool Detection</h2>
         <p class="panel-org">Northeastern University Research Lab &middot; Sep 2022 — Jun 2023</p>
         <div class="panel-images">
             <img src="assets/images/Surgery%20robot/surgery-arm-move.png" alt="Visual servoing control flow with AprilTag">
@@ -313,9 +325,7 @@
             <li>Built a ConvLSTM tracker (ResNet-18 + Conv + ConvLSTM) for real-time surgical instrument segmentation</li>
             <li>Integrated encoder feedback for closed-loop joint control</li>
         </ul>
-        <div class="project-tech">
-            <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>Visual Servoing</span><span>ConvLSTM</span>
-        </div>
+        <p class="entry-tags">Python · PyTorch · OpenCV · Visual Servoing · ConvLSTM</p>
     </template>
 
     <template id="tmpl-soccer">
@@ -332,65 +342,8 @@
             <li>Implemented real-time ball tracking and predictive interception</li>
             <li>Won Second Prize in FIRA Small Group Simulation category</li>
         </ul>
-        <div class="project-tech">
-            <span>Multi-Agent Systems</span><span>Strategy Design</span><span>Simulation</span>
-        </div>
+        <p class="entry-tags">Multi-Agent Systems · Strategy Design · Simulation</p>
     </template>
-
-    <!-- Awards Section -->
-    <section class="section" id="awards">
-        <div class="container">
-            <h2 class="section-title">Awards & Achievements</h2>
-            <div class="awards-grid">
-                <div class="award-card award-clickable" data-cert="assets/images/Math%20competition/cert-mcm-2022.jpg">
-                    <div class="award-year">2022</div>
-                    <h3>MCM/ICM Honorable Mention (H) <span class="award-expand-icon">&#9662;</span></h3>
-                    <p>Mathematical Contest in Modeling — Problem C. Developed mathematical models and data-driven analysis for real-world optimization problems.</p>
-                    <div class="award-cert-wrapper">
-                        <img src="assets/images/Math%20competition/cert-mcm-2022.jpg" alt="MCM/ICM 2022 Certificate" class="award-cert-img">
-                    </div>
-                </div>
-                <div class="award-card award-clickable" data-cert="assets/images/Math%20competition/cert-mcm-2021.jpg">
-                    <div class="award-year">2021</div>
-                    <h3>MCM/ICM Meritorious Winner (M) <span class="award-expand-icon">&#9662;</span></h3>
-                    <p>Mathematical Contest in Modeling — Problem A. Achieved First Prize level recognition for outstanding mathematical modeling and analysis.</p>
-                    <div class="award-cert-wrapper">
-                        <img src="assets/images/Math%20competition/cert-mcm-2021.jpg" alt="MCM/ICM 2021 Certificate" class="award-cert-img">
-                    </div>
-                </div>
-                <div class="award-card">
-                    <div class="award-year">2021</div>
-                    <h3>China Robotics Competition — Second Prize</h3>
-                    <p>FIRA Small Group Simulation 5v5 category. Designed multi-agent coordination strategies for autonomous robot soccer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">I'm currently looking for <strong>Summer 2026 internship</strong> opportunities in robotics, computer vision, and AI. Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:cy238@duke.edu" class="contact-card">
-                        <span class="contact-icon">&#9993;</span>
-                        <span>cy238@duke.edu</span>
-                    </a>
-                    <a href="https://github.com/Stephen-Ryan666" class="contact-card" target="_blank" rel="noopener">
-                        <span class="contact-icon">&#128736;</span>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Steven Yang. Built with care.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
